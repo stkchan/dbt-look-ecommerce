@@ -1,0 +1,15 @@
+dbt_look_ecommerce:
+  outputs:
+    dev:
+      dataset: "{{ env_var('dataset') }}"
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: asia-southeast1
+      method: oauth
+      priority: interactive
+      # To use this, first run (in your terminal): export BIGQUERY_PROJECT="your_project_name"
+      # Then dbt will recognise the variable
+      project: "{{ env_var('BIGQUERY_PROJECT') }}"
+      threads: 1
+      type: bigquery
+  target: dev
