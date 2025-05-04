@@ -39,3 +39,19 @@ models:
       +persist_docs:
         relation: true
         columns: true
+
+    intermediate:
+      +enabled: true
+      +materialized: table
+      +schema: intermediate
+      +persist_docs:
+        relation: true
+        columns: true
+
+    marts:
+      +enabled: true
+      +materialized: table
+      +schema: marts
+      +persist_docs:
+        relation: true
+        columns: true
