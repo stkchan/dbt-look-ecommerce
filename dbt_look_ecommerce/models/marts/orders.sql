@@ -22,6 +22,7 @@ order_item_measures AS (
 )
 
 SELECT
+	-- Dimensions from staging order table
 	od.order_id,
 	od.created_at   AS order_created_at,
 	{# {{ is_weekend('od.created_at') }} AS order_was_created_on_weekend, -- Macro defined in macros/macro_is_weekend.sql #}
