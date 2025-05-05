@@ -39,6 +39,7 @@ models:
       +persist_docs:
         relation: true
         columns: true
+      +hours_to_expiration: 168 # Table will be deleted in 168 hours (7 days) after creation
 
     intermediate:
       +enabled: true
@@ -47,6 +48,7 @@ models:
       +persist_docs:
         relation: true
         columns: true
+      +hours_to_expiration: 168 # Table will be deleted in 168 hours (7 days) after creation
 
     marts:
       +enabled: true
@@ -55,3 +57,4 @@ models:
       +persist_docs:
         relation: true
         columns: true
+      +hours_to_expiration: 168 # Table will be deleted in 168 hours (7 days) after creation
