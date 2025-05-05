@@ -8,6 +8,9 @@ models:
         tests:
           - not_null
           - unique
+          - primary_key:
+              severity: warn
+              where: "department = 'Men'"
 
       - name: cost
         description: "How much the product cost the business to purchase"
