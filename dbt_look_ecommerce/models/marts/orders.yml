@@ -1,8 +1,19 @@
 version: 2
 
+groups:
+  - name: sales
+    owner:
+      email:  sales-team@test.com
+      slack:  sales-data
+      github: sales-data-team
+
 models:
   - name: orders
     description: "Table of order level information"
+    config:
+      group: sales
+    access: private
+    
     columns:
       - name: order_id
         tests:
