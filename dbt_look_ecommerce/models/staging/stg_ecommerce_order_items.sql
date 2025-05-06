@@ -9,6 +9,7 @@ SELECT
 	id AS order_item_id,
 	order_id,
 	user_id,
+	{# CAST(user_id AS STRING) AS user_id, #}
 	product_id,
 
 	-- Other columns
