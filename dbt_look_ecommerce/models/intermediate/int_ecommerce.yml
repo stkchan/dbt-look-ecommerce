@@ -33,34 +33,39 @@ models:
         description: "item_sale_price minus product_cost"
         tests:
           - not_null
-          # - dbt_utils.expression_is_true:
-          #     expression: "= (item_sale_price - product_cost)"
+          - dbt_utils.expression_is_true:
+              expression: "= (item_sale_price - product_cost)"
 
       - name: product_cost
         description: "item_sale_price minus product_cost"
         tests:
           - not_null
-          # - dbt_utils.expression_is_true:
-          #     expression: "= (item_sale_price - product_cost)"
+          - dbt_utils.expression_is_true:
+              expression: "= (item_sale_price - product_cost)"
 
       - name: product_retail_price
         description: "item_sale_price minus product_cost"
         tests:
           - not_null
-          # - dbt_utils.expression_is_true:
-          #     expression: "= (item_sale_price - product_cost)"
+          - dbt_utils.expression_is_true:
+              expression: "= (item_sale_price - product_cost)"
 
       - name: item_profit
         description: "item_sale_price minus product_cost"
         tests:
           - not_null
-          # - dbt_utils.expression_is_true:
-          #     expression: "= (item_sale_price - product_cost)"
+          - dbt_utils.expression_is_true:
+              expression: "= (item_sale_price - product_cost)"
 
       - name: item_discount
         description: "product_retail_price - item_sale_price"
         tests:
           - not_null
-          # - dbt_utils.expression_is_true:
-          #     expression: "= (product_retail_price - item_sale_price - 1)"
+          - dbt_utils.expression_is_true:
+              expression: "= (product_retail_price - item_sale_price - 1)"
+
+  - name: int_ecommerce_first_order_created
+    description: ""
+    columns:
+      - *user_id
 
