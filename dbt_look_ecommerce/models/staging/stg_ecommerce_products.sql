@@ -1,3 +1,9 @@
+{{
+  config(
+	tags = ['test_tag']
+	)
+}}
+
 WITH source AS (
 	SELECT *
 
